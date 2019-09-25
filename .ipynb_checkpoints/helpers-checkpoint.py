@@ -39,7 +39,7 @@ class PoliciesType:
 from bonding_curve_eq import invariant,spot_price
 
 default_theta = 0
-default_initial_price = .1
+default_initial_price = .10
 default_kappa = 2
 
 def initialize_bonding_curve(initial_supply, initial_price=default_initial_price, kappa=default_kappa, theta=default_theta):
