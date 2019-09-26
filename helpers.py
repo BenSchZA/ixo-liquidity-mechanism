@@ -65,6 +65,10 @@ def bollinger_bands(value, window_size, num_of_std):
 
     return rolling_mean, upper_band, lower_band
 
+def generate_pair_id(pair):
+    sorted_pair = sorted(pair)
+    return '%s:%s' % (sorted_pair[0], sorted_pair[1])
+
 def get_node_ids_of_type(network, _type):
     return [x for x,y in network.nodes(data=True) if y.get('_type', None)==_type]
 
