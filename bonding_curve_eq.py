@@ -56,4 +56,3 @@ def withdraw_with_tax(deltaS, R,S, V0, exit_tax = default_exit_tax, kappa=defaul
     realized_price = quantity_recieved/deltaS
     
     return quantity_recieved, quantity_taxed, realized_price
-
