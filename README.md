@@ -18,14 +18,15 @@ Determine if there is a feasible mechanism to tie the reserve of the market make
 
 ## Running the simulation
 
-The main notebook is named `ixo.ipynb`.
+The main notebook is named `ixo.ipynb`. The Augmented Bonding Curve based market maker simulation is adapted in `market_maker.ipynb`.
 
-When the notebook is run, a folder named `experiment_x/` is created for every parameter sweep. Within this folder are the outputs of the experiments, such as charts, pickles, and logs.
+When the main notebook is run, a folder named `experiment_x/` is created for every parameter sweep. Within this folder are the outputs of the experiments, such as charts, pickles, and logs.
 
 ## Helper files
 
 1. `bonding_curve_eq.py` - a set of bonding curve functions, from the BlockScience Augmented Bonding Curve model
 2. `helpers.py` - a set of helper functions for processing data structures, such as the network graph or Pandas data frames
+3. `NOTES.md` - general simulation notes
 
 ## Generating a PDF of notebook
 
