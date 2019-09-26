@@ -66,10 +66,10 @@ def bollinger_bands(value, window_size, num_of_std):
     return rolling_mean, upper_band, lower_band
 
 def get_node_ids_of_type(network, _type):
-    return [x for x,y in network.nodes(data=True) if y['_type']==_type]
+    return [x for x,y in network.nodes(data=True) if y.get('_type', None)==_type]
 
 def get_edge_ids_of_type(network, _type):
-    return [x for x,y in network.edges(data=True) if y['_type']==_type]
+    return [x for x,y in network.edges(data=True) if y.get('_type', None)==_type]
 
 def pad(vec, length,fill=True):
 
