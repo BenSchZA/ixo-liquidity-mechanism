@@ -95,3 +95,6 @@ def make2D(key, data, fill=False):
     reshaped = np.array([a for a in data[newkey].values])
     
     return reshaped
+
+def debug(variable):
+    print(variable, '=', repr(eval(variable)))
