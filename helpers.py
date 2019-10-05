@@ -73,7 +73,7 @@ def get_node_ids_of_type(network, _type):
     return [x for x,y in network.nodes(data=True) if y.get('_type', None)==_type]
 
 def get_edge_ids_of_type(network, _type):
-    return [x for x,y in network.edges(data=True) if y.get('_type', None)==_type]
+    return [(x,y) for x,y,z in network.edges(data=True) if z.get('_type', None)==_type]
 
 def pad(vec, length,fill=True):
 
