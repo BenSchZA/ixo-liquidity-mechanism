@@ -1,18 +1,14 @@
-
-
-default_kappa= 2
+default_kappa = 2
 default_exit_tax = .02
 
 #value function for a given state (R,S)
 def invariant(R,S,kappa=default_kappa):
-    
     return (S**kappa)/R
 
 #given a value function (parameterized by kappa)
 #and an invariant coeficient V0
 #return Supply S as a function of reserve R
 def reserve(S, V0, kappa=default_kappa):
-
     return (S**kappa)/V0
 
 #given a value function (parameterized by kappa)
@@ -52,7 +48,5 @@ def withdraw_with_tax(deltaS, R,S, V0, exit_tax = default_exit_tax, kappa=defaul
     print(deltaR)
     quantity_taxed = exit_tax*deltaR
     quantity_recieved = (1-exit_tax)*deltaR
-    
     realized_price = quantity_recieved/deltaS
-    
     return quantity_recieved, quantity_taxed, realized_price
